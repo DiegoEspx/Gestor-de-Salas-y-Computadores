@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i8qzq1e%kg_d&11!t79%(uq)3*l#comlhm-jcqg97#z-xc%s9r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','backendgestionsalas.azurewebsites.net']
 
 
 # Application definition
@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'SalasComputadoras.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',  # Nombre de la base de datos
+        'USER': 'diego',     # Usuario
+        'PASSWORD': 'Copo12345678',  # Contraseña
+        'HOST': 'electivaiipostgres.postgres.database.azure.com',  # Host de PostgreSQL
+        'PORT': '5432',      # Puerto
     }
 }
 
