@@ -1,0 +1,19 @@
+    {
+        "navigationFallback": {
+        "rewrite": "index.html",
+        "exclude": [
+            "/images/*.{png,jpg,gif}",
+            "/css/*",
+            "/*.css"
+        ]
+        },
+        "routes": [],
+        "globalHeaders": {
+        "Content-Security-Policy": "default-src 'self'; img-src 'self' data:; media-src 'none'; script-src 'self'; style-src 'self'; font-src 'self';"
+        },
+        "mimeTypes": {
+        ".json": "application/json",
+        ".woff": "font/woff",
+        ".woff2": "font/woff2"
+        }
+    }
